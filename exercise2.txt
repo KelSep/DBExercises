@@ -1,0 +1,25 @@
+UNF(staffNo,dentistName,patientNo,patientName,appointment.date,appointment.time,surgeryNo)
+
+
+every row needs to be unique!:1NF(
+staff("StaffNo",dentistName,patientNo,patientname,"surgeryNo")
+appointments("surgeryNo",appointment)
+)
+
+2NF(
+Staff("StaffNo",dentistName,"surgeryNo")
+patients("StaffNo","patientNo",patientname)
+appointments("surgeryNo","appointment")
+)
+
+3NF(
+Staff("StaffNo",dentistName,"surgeryNo")
+patients("StaffNo","patientNo",patientname)
+appointments("SurgeryNo","appointment")
+)
+
+BCNF(
+Staff("StaffNo",dentistName,"surgeryNo")
+patients("StaffNo","patientNo",patientname)
+appointments("SurgeryNo","appointment")
+)
