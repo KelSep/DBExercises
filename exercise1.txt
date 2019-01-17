@@ -1,0 +1,7 @@
+$ git init
+$ echo "# DBExercises" >> README.md
+$ git add README.md
+$ git commit -m "first commit"
+$ git remote add origin https://github.com/KelSep/DBExercises.git
+$ git push -u origin master
+
