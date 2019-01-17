@@ -1,0 +1,20 @@
+UNF(PatientNo,Bed nummer FullName,bednumber,WardNo,WardName,DrugNo,Name,description,dosage,method of admin,units per day,start date, finish date)
+
+1NF(
+hospital("PatientNo",FullName,WardNo,WardName,"DrugNo",Name,description,dosage,method of admin,units per day,"start date", finish date)
+
+2NF(
+Patient("patientNo",FullName, bednumber, wardNo, WardName,"DrugNo","start date",finish date,units per day)
+Drug("DrugNo",Name,description,dosage,method of admin)
+)
+3NF(
+patient("patientNo", Fullname, bednumber,wardNo,"DrugNo","start date", finish date, units per day)
+Drug("DrugNo", Name,description,dosage,method of admin)
+ward("WardNo",wardname)
+)
+
+BCNF(
+patient("patientNo", Fullname, bednumber,wardNo,"DrugNo","start date", finish date, units per day)
+Drug("DrugNo", Name,description,dosage,method of admin)
+ward("WardNo",wardname)
+)
